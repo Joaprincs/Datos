@@ -1,0 +1,931 @@
+---
+output:
+  html_document:
+    df_print: paged
+  latex_engine: pdflatex
+  pdf_document: null
+---
+---
+\centering
+$\textbf{TITULO}$: "$\textbf{ANALISIS DE DATOS}$"
+$\textbf{AUTOR}$ : "$\textbf{JOAN SULLCARAY PAUCAR}$"
+
+<style>
+body {
+    font-family: "Berlin Sans FB", sans-serif;
+}
+</style>
+\centering
+## $\textbf{RESUMEN}$ 
+
+El presente trabajo aborda la relacion entre la teoría de ocio y consumo, explorando datos relacionados al departamento de Pasco, obtenidos del Instituto Nacional de Estadística e Informática (INEI). Se propone un análisis y visualización de los datos con el objetivo de identificar patrones significativos y tendencias en la relación entre el ocio y consumo, de esta manera tenieno resultados que traten de ajustarse a la realidad social o tratar de explicar la misma.
+
+\centering
+## $\textbf{MARCO DE REFERENCIA}$
+
+La intersección entre la teoría de ocio y el consumo es un área de investigación multidisciplinaria que explora la relación entre las actividades de tiempo libre y los patrones de gasto. Desde una perspectiva sociológica, económica y psicológica, esta teoría proporciona un marco conceptual para comprender cómo las personas asignan recursos a sus actividades de ocio y cómo estas influyen en sus decisiones de consumo. En este aspecto trabajaremos sin el ocio propiamente dicho, sino las horas no trabajadas que reflejan el ocio.
+
+Definición de Ocio y Consumo: 
+
+Ocio: Se refiere al tiempo libre que las personas eligen utilizar de manera voluntaria para actividades recreativas, culturales o de entretenimiento, alejadas de las obligaciones laborales o cotidianas. Voguel, 2001): “hay actividades que la ''gente disfruta e intenta practicar, escuchar o ver'',que se denominan entretenimiento que deriva de la palabra francesa divertissement y tienen como objetivo el recreo (recuperación de la fuerza o del espíritu tras el cumplimiento del
+deber)”. 
+
+
+Consumo: Implica el uso de recursos, ya sea en forma de bienes o servicios, para satisfacer necesidades y deseos. En el contexto de la teoría de ocio-consumo, se analiza cómo las elecciones de ocio afectan los patrones de consumo.
+
+Supuestos del modelo: La función de utilidad Cobb-Douglas para el consumo (C) y el ocio (R) se expresa como U(C,R) = C^α * R^β, donde α y β son parámetros que determinan la elasticidad de sustitución entre consumo y ocio. Un supuesto importante en este contexto es que el individuo tiene una renta exógena m, es decir, una cantidad de dinero que puede gastar en consumir bienes y ocio. Esta renta se utiliza para formar una restricción presupuestaria, que está determinada por los precios de los bienes y servicios. Se destaca que este supuesto simplifica el modelo al evitar la complejidad de explicar cómo se obtiene la renta. 
+
+Modelos Teóricos:
+
+Modelo de Compensación de Tiempo: Propone que las personas tienden a gastar más en actividades de ocio cuando tienen más tiempo libre disponible, y viceversa. La relación entre el ocio y el consumo se basa en la compensación de la escasez de tiempo.
+
+Modelo de Capital Social: Explora cómo las actividades de ocio pueden contribuir al desarrollo de relaciones sociales, afectando así las decisiones de consumo. Un mayor capital social puede influir positivamente en las elecciones de productos y servicios compartidos.
+
+Modelo Gary Becker: El modelo propuesto por Gary Becker integra el tiempo y el dinero como factores de producción, similar al enfoque neoclásico. En este modelo, el individuo dispone de una dotación de tiempo que puede utilizar en labores domésticas o intercambiar en el mercado por salario. Becker equipara un aumento salarial con una disminución de los precios de los bienes de mercado en términos reales. Además, el modelo explica la especialización en el hogar, ya que las diferencias de productividad entre los miembros determinan el grado de especialización en el mercado y en las tareas domésticas.
+
+Caracteristicas de Pasco:
+
+Ubicación Política: Este departamento tiene como ubicación la región central de nuestro país, limita por el norte con el departamento de Huánuco, por el este con el departamento de Ucayali, por el sur con el departamento de Junín y por el oeste con el departamento de Lima. En donde este abarca a su vez regiones de la Sierra alta y regiones de la selva, toda esta Región abarca nada menos que un área de 25028 km2
+
+Ubicación Geográfica
+La región de pasco posee las siguientes características geográficas:
+Altitud: Va desde los 250 a 4340 m.s.n.m, en donde la provincia de Constitución tiene una altitud promedio de 268 m.s.n.m, y la provincia de Huayllay de unos 4340 m.s.s.m 
+Superficie: 25319.59 km^2
+La superficie de Pasco abarca el 1.95% del territorio nacional.
+
+Patrimonio Cultural Material: Se tiene como principales complejos a: Complejo arqueológico colonial de procesamiento de plata( es un legado arqueológico que datan de épocas coloniales, en donde se dan evidencias no tanto en la estructura de las mismas sino también por los símbolos que se encuentran en esta), la Ciudad Inca de Pumpu (zona de residencia de los Chinchaycochas y lo yaros, el cual fue un centro religioso importante.
+
+Patrimonio Natural
+Pasco al poseer regiones tanto de la sierra como de la selva, la convierten en un paisaje variado y recóndito para observar y visitar, aquí encontramos los siguientes paisajes: Santuario Nacional de Huayllay, Baños Termales de Calera, El Nevado de Huaguruncho, El Parque Nacional de Yanachaga – Chemillen, etc
+
+La población proyectada en el Región de Pasco para junio del 2022 asciende a 269 269 habitantes las cuales se distribuyen en sus principales provincias de Cerro de pasco, Oxapampa y Daniel Alcides Carrión de la siguiente manera: 121 446, 102 429 y 45 421 respectivamente. Lo cual, a diferencia del censo hecho durante el año del 2017 por parte del INEI, la población llegaba a un límite de 254 065 habitantes, lo cual refleja una diferencia de 15 204 habitantes. 
+
+Educación: El principal centro de estudio superior en Pasco es la universidad nacional Daniel Alcides Carrión - UNDAC, teniendo como principal ubicación a la capital de Cerro de Pasco, esto la convierte en una de la universidad más alta a nivel nacional e internacional. Teniendo como fundación el año de 1965, edemas de ello lleva el nombre de un singular personaje que tenía orígenes de esta región, prácticamente de Quiulacocha - Cerro de Pasco, además de ser el mártir de la medicina peruana.
+
+Estructura Económica: La región de Pasco es influencia principalmente por lo que sería el sector agropecuario y el sector minero.
+
+
+
+\centering
+## $\textbf{MATERIAL Y METODOS}$
+
+Plataforma de Desarrollo: Para llevar a cabo el estudio sobre la teoría de ocio y consumo en los departamentos del Perú, se utilizó la plataforma de desarrollo RStudio. RStudio proporciona un entorno integrado que facilita la manipulación de datos, análisis estadísticos y la generación de informes de manera eficiente.
+
+Origen de los Datos: Los datos utilizados en este estudio fueron obtenidos del Instituto Nacional de Estadística e Informática (INEI) del Perú. Específicamente, se focalizaron en los módulos 5 y 34 de las encuestas del INEI, que proporcionan información detallada sobre las actividades de ocio, características demográficas y patrones de consumo en los diferentes departamentos del país.
+
+Proceso de Recopilación de Datos: Se accedió a los conjuntos de datos del INEI correspondientes a los módulos 5 y 34 a través de fuentes oficiales y plataformas en línea proporcionadas por el instituto. Los datos fueron descargados en formatos compatibles con R, como archivos CSV, para facilitar la importación y manipulación en el entorno RStudio.
+
+Procesamiento y Limpieza de Datos: Se llevó a cabo un proceso exhaustivo de limpieza y preprocesamiento de datos para eliminar posibles errores, valores atípicos y asegurar la coherencia de los datos. Las variables relevantes para el estudio, como actividades de ocio, características demográficas y patrones de consumo, fueron seleccionadas y codificadas según la necesidad del análisis.
+
+Análisis Estadístico: Se emplearon técnicas estadísticas descriptivas para explorar la distribución de variables clave.Para evaluar las relaciones entre variables, se realizaron análisis de correlación y regresión, utilizando funciones y paquetes estadísticos disponibles en R.
+
+Modelado Predictivo: Se construyeron modelos predictivos utilizando técnicas de regresión para entender la relación entre actividades de ocio y patrones de consumo.
+
+Presentación de Resultados: Los resultados fueron presentados utilizando herramientas gráficas como ggplot2 y mapas interactivos para comunicar de manera efectiva los hallazgos.
+
+\centering
+## $\textbf{ANALISIS DE RESULTADOS}$
+
+\centering
+## $\textbf{Analisis exploratio de datos}$
+
+\centering
+## $\textbf{TABLA 1}$
+
+
+```{r echo=FALSE,warning=FALSE}
+library(gtsummary)
+M534f1922 <- read.csv("https://github.com/Joaprincs/Datos/raw/main/M534f1922%20-%200.csv")
+tabla1<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, sexo) %>%
+  tbl_summary(by = sexo)
+tabla1
+```
+
+Se puede decir que, en promedio, las mujeres tienden a tener valores más altos en hocios y inghogpcs en comparación con los hombres. Además, la variable salsem muestra una variabilidad considerable entre ambos grupos
+
+\centering
+## $\textbf{TABLA 2}$
+  
+  
+```{r echo= FALSE}
+tabla2<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, zona) %>%
+  tbl_summary(by = zona)
+tabla2
+```
+
+La mediana de hocios es similar entre áreas rurales y urbanas, la mediana de salsem es significativamente más alta en áreas urbanas en comparación con áreas rurales, lo que sugiere que, en promedio, los salarios mensuales pueden ser más altos en áreas urbanas.La mediana de inghogpcs es más alta en áreas urbanas que en áreas rurales, lo que sugiere que, en promedio, los ingresos per cápita del hogar son más altos en áreas urbanas. 
+
+\centering
+## $\textbf{TABLA 3}$  
+  
+ 
+```{r echo= FALSE}
+tabla3<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, estrsocial) %>%
+  tbl_summary(by = estrsocial)
+tabla3
+```
+ 
+Tanto en aspectos como el hocios, salsem  e inghogpcs se observa una variabilidad en las medianas a medida que disminuye el tamaño de la población.
+ 
+\centering
+## $\textbf{TABLA 4 }$  
+
+```{r echo= FALSE}
+tabla4<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, pobreza) %>%
+  tbl_summary(by = pobreza)
+tabla4
+```
+
+\centering
+## $\textbf{TABLA 5}$  
+
+
+```{r echo=FALSE}
+library(gtsummary)
+tabla5<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, dominio) %>%
+  tbl_summary(by = dominio)
+tabla5
+```
+
+Para hocios, la Región 5 tiene una mediana ligeramente más alta que la Región 7.
+En cuanto a salsem, la Región 5 muestra una mediana más alta y un IQR más amplio en comparación con la Región 7, lo que indica una mayor variabilidad en los salarios semanales en la Región 5.
+En inghogpcs, la mediana es relativamente similar entre ambas regiones, pero la Región 5 tiene un IQR más amplio, indicando una mayor variabilidad en los ingresos per cápita del hogar semanal.
+
+\centering
+## $\textbf{GRAFICO 1}$
+
+
+```{r echo=FALSE}
+library(ggplot2)
+M534f1922 <- read.csv("https://github.com/Joaprincs/Datos/raw/main/M534f1922%20-%200.csv")
+gra1<-ggplot(M534f1922, aes(hocios, ln_salsem)) + geom_point()+
+  stat_smooth(method=lm, color="red")
+gra1
+```
+
+El grafico indica que hay una relación negativa entre las dos variables. En este contexto específico, significa que a medida que los valores de hocios aumentan, los valores correspondientes de ln_salsem tienden a disminuir.
+
+\centering
+## $\textbf{GRAFICO 2}$
+
+
+```{r echo=FALSE}
+library(ggplot2)
+M534f1922 <- read.csv("https://github.com/Joaprincs/Datos/raw/main/M534f1922%20-%200.csv")
+gra2<-ggplot(M534f1922, aes(x = hocios, y = ln_salsem, color = factor(sexo))) +
+  geom_point()+stat_smooth(method=lm, color="red")
+gra2
+
+```
+
+En promedio, la disminución en ln_salsem asociada con el aumento de hocios es consistente en ambos grupos de sexo. 
+
+\centering
+# $\textbf{GRAFICO 3}$
+
+
+```{r echo=FALSE}
+library(ggplot2)
+M534f1922 <- read.csv("https://github.com/Joaprincs/Datos/raw/main/M534f1922%20-%200.csv")
+gra3<-ggplot(M534f1922, aes(x = hocios, y = ln_salsem, color = zona)) +
+  geom_point()+stat_smooth(method=lm, color="yellow")
+gra3
+```
+
+Dado que la línea de regresión tiene una pendiente negativa, indica que, en promedio, a medida que aumentan las horas de ocio, el logaritmo del salario tiende a disminuir.
+Variabilidad:
+
+\centering
+# $\textbf{GRAFICO 4}$
+
+```{r echo=FALSE}
+gra4<-ggplot(M534f1922, aes(x = hocios, y = ln_salsem, color = factor(pobreza))) +
+  geom_point()+stat_smooth(method=lm, color="#556B2F")
+gra4
+```
+
+La línea de regresión lineal se ajusta a los datos y muestra la tendencia general de la relación entre las horas de ocio, el logaritmo del salario y el nivel de pobreza.
+
+\centering
+## $\textbf{GRAFICO 5}$
+
+
+```{r echo=FALSE}
+gra5<-ggplot(M534f1922, aes(hocios, ln_inghogpcs)) + geom_point(color="orange")+
+  stat_smooth(method=lm, color="royalblue")
+gra5
+```
+
+La línea de regresión parece ser casi recta, lo que sugiere una relación lineal entre las horas de ocio y el logaritmo del ingreso del hogar per cápita. En otras palabras, la tendencia general es que a medida que cambian las horas de ocio, el logaritmo del ingreso del hogar per cápita cambia de manera constante.
+
+\centering
+## $\textbf{GRAFICO 6}$
+
+```{r pressure, echo=FALSE}
+gra6<-ggplot(M534f1922, aes(hocios, ln_gashogpcs)) + geom_point(color="coral")+
+  stat_smooth(method=lm, color="#66CD00")
+gra6
+```
+
+
+\centering
+## $\textbf{GRAFICO 7}$
+
+```{r echo=FALSE}
+gra7<-ggplot(M534f1922, aes(x=hocios, y=ln_salsem,color=factor(dominio))) + geom_point()+
+  stat_smooth(method=lm, color="red")
+gra7
+```
+
+
+\centering
+## $\textbf{GRAFICO 8}$
+
+```{r echo=FALSE}
+gra8<-ggplot(M534f1922, aes(x=hocios, y=ln_salsem,color=factor(estciv))) + 
+  geom_point()+ stat_smooth(method=lm, color="#00868B")
+gra8
+```
+
+\centering
+## $\textbf{GRAFICO 9}$
+
+```{r echo=FALSE}
+ggplot(M534f1922, aes(x = hocios, y = ln_salsem, fill = factor(dominio))) +
+  geom_boxplot() +
+  labs( x = "hocios", y = "ln_salsem") +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98")) 
+```
+
+\centering
+## $\textbf{GRAFICO 10}$
+
+```{r echo=FALSE}
+ggplot(M534f1922, aes(x = hocios, y = ln_salsem, fill = factor(sexo))) +
+  geom_boxplot() +
+  labs( x = "hocios", y = "ln_salsem") +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98"))
+```
+
+\centering
+## $\textbf{GRAFICO 11}$
+
+```{r echo=FALSE}
+ggplot(M534f1922, aes(x = hocios, y = ln_salsem, fill = factor(pobreza))) +
+  geom_boxplot() +
+  labs( x = "hocios", y = "ln_salsem") +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98","#9ACD32")) 
+```
+
+\centering
+## $\textbf{GRAFICO 12}$
+
+```{r echo=FALSE}
+ggplot(M534f1922, aes(x = hocios, y = ln_gashogpcs, fill = factor(zona))) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98")) 
+```
+
+
+\centering
+## $\textbf{Analisis de estimaciones y pruebas de hipotesis}$
+
+\centering
+## $\textbf{INTERVALOS DE CONFIANZA}$
+
+\centering
+## $\textbf{EJEMPLO: hocios}$
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(BSDA)
+zsum.test(mean.x=mean(M534f1922$hocios),sigma.x=sd(M534f1922$hocios), n.x=1308,
+    conf.level=0.95)
+```
+
+El intervalo de confianza del 95% para la media poblacional es (121.9413, 124.3324).
+Este intervalo proporciona un rango plausible para la verdadera media poblacional, con un nivel de confianza del 95%, lo que significa que si se repitiera el proceso de muestreo muchas veces, se esperaría que el intervalo de confianza capturara la verdadera media poblacional en aproximadamente el 95% de los casos.
+
+\centering
+## $\textbf{EJEMPLO: ln_salsem}$
+
+
+```{r echo=FALSE}
+zsum.test(mean.x=mean(M534f1922$ln_salsem ),sigma.x=sd(M534f1922$ln_salsem ), n.x=1308,
+          conf.level=0.95)
+```
+
+El intervalo de confianza del 95% para la media poblacional del logaritmo de los salarios es (4.974144, 5.104808)
+
+\centering
+## $\textbf{EJEMPLO: edad}$
+
+```{r echo=FALSE}
+zsum.test(mean.x=mean(M534f1922$edad ),sigma.x=sd(M534f1922$edad), n.x=1308,
+          conf.level=0.95)
+```
+
+El intervalo de confianza del 95% para la media poblacional de la edad es (43.22409, 45.00068), 
+
+
+
+\centering
+## $\textbf{EJEMPLO: ln_gashogpcs}$
+
+```{r echo=FALSE}
+zsum.test(mean.x=mean(M534f1922$ln_gashogpcs),sigma.x=sd(M534f1922$ln_gashogpcs), n.x=1308,
+          conf.level=0.95)
+```
+
+Este resultado indica que el logaritmo de los gastos del hogar per cápita tiene una media poblacional significativamente diferente de 0,
+
+
+
+
+\centering
+## $\textbf{EJEMPLO: diferencia de salarios enre hombres y mujeres}$
+
+```{r echo=FALSE}
+# media
+tapply(X = M534f1922$hocios, INDEX  = M534f1922$sexo, 
+       FUN = mean, na.rm= T)
+#varianza
+tapply(X = M534f1922$hocios, INDEX  = M534f1922$sexo, 
+       FUN = sd, na.rm= T)
+zsum.test(mean.x=120.0689,sigma.x=20.71677,n.x=740,
+          mean.y=127.1338,sigma.y=23.11225,n.y=568, 
+          conf.level=0.95)
+```
+
+La estadística de prueba (z) es negativa, indicando que la media de hocios es significativamente menor en hombres que en mujeres, hay evidencia estadística para afirmar que la media de hocios es significativamente diferente entre hombres y mujeres, con un sesgo hacia valores más bajos en hombres
+
+
+
+
+\centering
+## $\textbf{EJEMPLO 2}$
+
+
+\centering
+## $\textbf{PRUEBA DE HIPOTESIS: hocios}$
+
+```{r, echo=FALSE}
+t.test(M534f1922$hocios, alternative='two.sided', 
+       conf.level=0.95, mu=123.1369)
+```
+
+
+En el caso del test t para la variable hocios, con una estadística de prueba (t) cercana a cero y un valor p alto (0.9999), no hay evidencia suficiente para rechazar la hipótesis nula. Por lo tanto, se acepta la hipótesis nula ( H0:μ=123.1369). En términos prácticos, esto significa que no hay suficiente evidencia para afirmar que la media de hocios es diferente de 123.1369.
+
+
+
+
+\centering
+## $\textbf{PRUEBA DE HIPOTESIS: ln_salsem}$
+
+```{r echo=FALSE}
+t.test(M534f1922$ln_salsem, alternative='two.sided', 
+       conf.level=0.95, mu=5.039476)
+```
+
+En el caso del test t para la variable ln_salsem, con una estadística de prueba (t) cercana a cero y un valor p alto (1), no hay evidencia suficiente para rechazar la hipótesis nula. Por lo tanto, se acepta la hipótesis nula.En términos prácticos, esto significa que no hay suficiente evidencia para afirmar que la media de ln_salsem es diferente de 5.039476.
+
+
+
+\centering
+## $\textbf{PRUEBA DE HIPOTESIS:ln_gashogpcs}$
+
+```{r echo=FALSE}
+t.test(M534f1922$ln_gashogpcs , alternative='two.sided', 
+       conf.level=0.95, mu=4.327796)
+
+```
+
+En el caso del test t para la variable ln_gashogpcs, con una estadística de prueba (t) cercana a cero y un valor p alto (1), no hay evidencia suficiente para rechazar la hipótesis nula. Por lo tanto, se acepta la hipótesis nula,en términos prácticos, esto significa que no hay suficiente evidencia para afirmar que la media de ln_gashogpcs es diferente de 4.327796. 
+
+
+
+\centering
+## $\textbf{PRUEBA DE HIPOTESIS:edad}$
+
+
+
+
+\centering
+## $\textbf{ESTIMACION}$
+
+```{r, echo=FALSE}
+modelo1<-lm(hocios~ln_salsem, M534f1922)
+summary(modelo1)
+```
+
+Si el logaritmo del salario (ln_salsem) es cero, entonces se espera que el valor medio de hocios sea de 151.5847 unidades.Un aumento de una unidad en el logaritmo del salario (ln_salsem) se asocia, en promedio, con una disminución de 5.6450 unidades en hocios. Aunque el modelo es estadísticamente significativo, la proporción de varianza explicada es relativamente baja. Esto podría sugerir que otros factores no incluidos en el modelo también son importantes para explicar la variabilidad en hocios.
+
+```{r echo=FALSE}
+modelo2<-lm(hocios~ln_inghogpcs, M534f1922)
+summary(modelo2)
+```
+
+Si el logaritmo del salario (ln_salsem) es cero, entonces se espera que el valor medio de hocios sea de 151.5847 unidades.Un aumento de una unidad en el logaritmo del salario (ln_salsem) se asocia, en promedio, con una disminución de 5.6450 unidades en hocios.
+```{r echo=FALSE}
+modelo3<-lm(hocios~edad+I(edad^2), M534f1922)
+summary(modelo3)
+```
+
+Si la edad y su cuadrado son cero, se espera que el nivel medio de ocupación (hocios) sea de 143.1508 unidades.Un aumento de una unidad en la edad se asocia, en promedio, con una disminución de 1.0343 unidades en el nivel de ocupación 
+
+
+
+
+\centering
+## $\textbf{DISCUCION DE RESULTADOS}$
+
+Si la teoría de ocio y consumo sugiere que la edad influye en las actividades de ocio y, por ende, en el nivel de ocupación, entonces el hallazgo de que el coeficiente de la edad es significativo y negativo podría respaldar esa idea. Puedes argumentar que a medida que las personas envejecen, su nivel de ocupación tiende a disminuir, lo que podría estar relacionado con cambios en sus patrones de ocio y consumo. Se llevaron a cabo pruebas de hipótesis para evaluar afirmaciones específicas relacionadas con la teoría de ocio y consumo. Las pruebas t de Student,u otras pruebas estadísticas se utilizaron para determinar si existen diferencias significativas entre grupos o variables específicas. 
+
+
+
+\centering
+## $\textbf{CONCLUSIONES}$
+
+En este trabajo, se ha llevado a cabo un análisis detallado sobre la interrelación entre el ocio y el consumo, aplicando herramientas estadísticas y gráficas utilizando R Studio. Los módulos 5 y 34 han servido como marco teórico para entender la dinámica entre estas dos variables fundamentales en la toma de decisiones individuales. El desarrollo de pruebas de hipótesis ha sido esencial para profundizar en la comprensión de las relaciones planteadas en la teoría de ocio y consumo. R Studio ha facilitado la implementación y ejecución de estas pruebas, permitiendo evaluar la significancia estadística de las diferencias y relaciones propuestas. Los resultados obtenidos han proporcionado evidencia para respaldar o refutar hipótesis específicas, arrojando luz sobre la validez de las relaciones planteadas en la teoría. Adicionalmente, se ha incorporado el cálculo de intervalos de confianza, proporcionando una medida de la precisión de las estimaciones realizadas a partir de los datos. Esto ha enriquecido el análisis al ofrecer una perspectiva más completa sobre la variabilidad de los resultados y la confianza que se puede tener en las conclusiones derivadas del estudio.
+
+
+\centering
+## $\textbf{REFERENCIAS BIBLIOGRAFICAS}$
+
+
+BANCO CENTRAL DE RESERVA DEL PERÚ- SUCURSAL HUANCAYO. (2022). CARACTERIZACIÓN DEL DEPARTAMENTO DE PASCO. 
+https://www.bcrp.gob.pe/docs/Sucursales/Huancayo/pasco-caracterizacion.pdf
+
+Instituto Nacional de Estadística e Informática. (2022). Compendio Estadístico, Pasco 2022. https://cdn.www.gob.pe/uploads/document/file/4269945/Compendio%20Estad%C3%ADstico%2C%20Pasco%202022.pdf?v=1678998267
+
+
+
+\centering
+## $\textbf{ANEXOS}$
+
+a) ################################################################################
+# Construcción de la tabla de datos para el trabajo de estadística inferencial #
+################################################################################
+
+# Se carga el modulo5 2021
+
+library(haven)
+
+M52021 <- Enaho01A_2021_500
+
+# Se carga el modulo5 2022
+
+library(haven)
+
+M52022 <- Enaho01a_2022_500
+
+# Se carga el modulo34 2021
+
+library(haven)
+
+M342021 <- Sumaria_2021
+
+# Se carga el modulo34 2022
+
+library(haven)
+
+M342022 <- Sumaria_2022
+
+
+
+# Adjuntando las tablas según modulos
+
+library(tidyverse)
+
+# Se adjunta (append) los modulos 5 de los años 2021 y 2022 y se crea el M5_2122
+
+M5_2122<-dplyr::bind_rows(M52021, M52022)
+
+View(M5_2122)
+
+
+# Transformamos el nombre de las columnas a minusculas
+
+nuevos_nombres <- tolower(colnames(M5_2122))
+colnames(M5_2122) <- nuevos_nombres
+
+
+
+# Se adjunta (append) los modulos 34 de los años 2021 y 2022 y se crea el M34_2122
+
+M34_2122<-dplyr::bind_rows(M342021, M342022)
+View(M34_2122)
+
+nuevos_nombres <- tolower(colnames(M34_2122))
+colnames(M34_2122) <- nuevos_nombres
+
+# Se elimina los dataset iniciales y así tener más recursos en la PC
+
+rm(M52021, M52022, M342021, M342022)
+
+rm(Enaho01A_2021_500, Enaho01a_2021_500, Sumaria_2021,Sumaria_2022,nuevos_nombres)
+
+# Se (de M5_2122 y M34_2122) construye las tablas filtradas
+
+# Modulo 5
+
+dfM5<-select(M5_2122, año, ubigeo, conglome, vivienda, hogar, codperso,
+             p204, p207, p208a, p209, p203, ocu500, ocupinf, emplpsec, p513t, p518, 
+      p520, i524a1, d529t, i530a, d536, i538a1, d540t, i541a, d543, d544t, 
+      p301a, fac500a)
+View(dfM5)
+
+# Modulo 34
+
+dfM34<-select(M34_2122, año, ubigeo, conglome, vivienda, hogar, dominio, estrato, 
+            percepho, mieperho, inghog1d, gashog1d, pobreza, estrsocial)
+View(dfM34)
+
+# Se eliminan los M5_2122 y M34_2122
+
+rm(M5_2122, M34_2122)
+
+# Se construye las variables calculadas
+
+# dfM5
+
+dfM5$ubidpto<-substring(dfM5$ubigeo, 1, 2)
+head(dfM5$ubidpto)
+
+dfM5$htsemps<-rowSums(dfM5[c("p513t", "p518")], na.rm = T)
+head(dfM5$htsemps)
+
+dfM5$hocios<-(7*24-dfM5$htsemps) 
+head(dfM5$hocios)
+
+dfM5$salanual<-rowSums(dfM5[c("i524a1", "d529t", "i530a", "d536", "i538a1", "d540t", 
+                                "i541a", "d543", "d544t")], na.rm = T)
+head(dfM5$salanual)
+
+dfM5$salsem<-(rowSums(dfM5[c("i524a1", "d529t", "i530a", "d536", "i538a1", "d540t", 
+                              "i541a", "d543", "d544t")], na.rm = T))/52.1429
+head(dfM5$salsem)
+
+dfM5$gnestudios<-as.factor(dfM5$p301a)
+head(dfM5$gnestudios)
+
+# Select de columnas necesarias: dfM5
+dfM500<-select(dfM5, -c(p520:d544t))
+head(dfM500)
+# Se construye las variables calculadas: dfM34
+dfM34$zona<-ifelse(dfM34$estrato<=6, "Urbana", "Rural")
+head(dfM34$zona)
+
+dfM34$inghogpc<-dfM34$inghog1d/dfM34$mieperho
+head(dfM34$inghogpc)
+
+dfM34$gashogpc<-dfM34$gashog1d/dfM34$mieperho
+head(dfM34$gashogpc)
+
+dfM34$inghogpcs<-(dfM34$inghog1d/dfM34$mieperho)/52.1429
+head(dfM34$inghogpcs)
+
+dfM34$gashogpcs<-(dfM34$gashog1d/dfM34$mieperho)/52.1429
+head(dfM34$gashogpcs)
+# Select de columnas necesarias: dfM34
+dfM340<-select(dfM34, -c(percepho:gashog1d))
+head(dfM500)
+
+# Merge dfM500 ^ dfM340
+dfM534<-merge(x = dfM500, y = dfM340, by = c("año", "conglome", "vivienda", "hogar"))
+head(dfM534)
+
+## Se cambia el nombre de algunas de las columnas ##
+
+rm(dfM34,dfM340,dfM5,dfM500)
+
+# library(reshape)
+
+names(dfM534)
+colnames(dfM534)[which(names(dfM534) == "ubigeo.x")] <- "ubigeop"
+colnames(dfM534)[which(names(dfM534) == "ubigeo.y")] <- "ubigeoh"
+colnames(dfM534)[which(names(dfM534) == "p204")] <- "mhogar"
+colnames(dfM534)[which(names(dfM534) == "p207")] <- "sexo"
+colnames(dfM534)[which(names(dfM534) == "p208a")] <- "edad"
+colnames(dfM534)[which(names(dfM534) == "p209")] <- "estciv"
+colnames(dfM534)[which(names(dfM534) == "p203")] <- "reljh"
+colnames(dfM534)[which(names(dfM534) == "p513t")] <- "htop"
+colnames(dfM534)[which(names(dfM534) == "p518")] <- "htos"
+colnames(dfM534)[which(names(dfM534) == "p301a")] <- "gnestudios"
+
+# Se graba el dfM534 como un dataset
+
+library(readr)
+write_csv(M534f1922,"M534f1922.csv") #Formato CSV
+library(openxlsx)
+write.xlsx(dfM534 , "M534.xlsx")   # formato excel
+
+ ## Filtros y Limpieza de la tabla de datos ##
+
+## Se carga la Tabla de datos
+
+library(haven)
+M534 <- read_dta("CarpetaAcademicaJCV2023-2-Pregrado UNCP/Trabajo EstaInferencial/Datos/M534.dta")
+colnames(M534)
+M534 <- dfM534
+rm(M534)
+library
+M534
+
+# Se eliminan las columnas innecesarias
+
+M534<-select(M534, -c(gnestudios...24, ubigeoh))
+
+## Filtros ##
+
+names(M534)
+colnames(M534)[which(names(M534) == "gnestudios...17")] <- "gnestudios"
+names(M534)
+table(M534$ocu500)
+table(M534$mhogar)
+table(M534$gnestudios)
+table(M534$año)
+M534 %>% filter( mhogar==1 & ocu500==1)-> M534a
+names(M534a)
+M534a <- filter(M534a, gnestudios != 12)
+names(M534a)
+table(M534a$mhogar)
+table(M534a$ocu500)
+table(M534a$gnestudios)
+
+
+# Exploracion de datos #
+
+table(M534a$sexo)
+hist(M534a$edad)
+summary(M534a$edad)
+table(M534a$sexo)
+table(M534a$reljh)
+table(M534a$ocu500)
+table(M534a$ocupinf)
+table(M534a$emplpsec)
+summary(M534a$htop)
+hist(M534a$htop)
+boxplot(M534a$htop)
+summary(M534a$htos)
+hist(M534a$htos)
+boxplot(M534a$htos)
+
+
+class(M534a$gnestudios) 
+
+# lo reconoce como un caracter, cambiamos a una serie numerica
+
+M534a$gnestudios <- as.numeric(M534a$gnestudios)
+M534a <- M534a[!is.na(as.numeric(M534a$gnestudios)), ]
+
+#volvemos a llamar al codigo
+
+hist(M534a$gnestudios)
+
+summary(M534a$htsemps)
+hist(M534a$htsemps)
+boxplot(M534a$htsemps) 
+
+summary(M534a$hocios)
+hist(M534a$hocios)
+boxplot(M534a$hocios)
+
+summary(M534a$salsem) #Filtrar
+hist(M534a$salsem)
+boxplot(M534a$salsem) #Transformar
+
+table(M534a$pobreza)
+table(M534a$estrsocial)
+table(M534a$zona)
+
+summary(M534a$inghogpcs) #Filtrar
+hist(M534a$inghogpcs)
+boxplot(M534a$inghogpcs) # Transformar
+
+summary(M534a$gashogpcs) #Filtrar
+hist(M534a$gashogpcs)
+boxplot(M534a$gashogpcs) # Transformar
+
+## Filtros y transformaciones
+
+M534a %>% filter( salsem>0)-> M534a
+M534a$ln_salsem=log(M534a$salsem)
+
+M534a %>% filter( inghogpcs>0)-> M534a
+M534a$ln_inghogpcs=log(M534a$inghogpcs)
+
+M534a %>% filter( gashogpcs>0)-> M534a
+M534a$ln_gashogpcs=log(M534a$gashogpcs)
+
+summary(M534a$ln_salsem)
+hist(M534a$ln_salsem)
+boxplot(M534a$ln_salsem)
+
+summary(M534a$ln_inghogpcs)
+hist(M534a$ln_inghogpcs)
+boxplot(M534a$ln_inghogpcs)
+
+summary(M534a$ln_gashogpcs)
+hist(M534a$ln_gashogpcs)
+boxplot(M534a$ln_gashogpcs)
+
+## Se graba la tabla - país
+
+library(haven)
+library(openxlsx)
+write.xlsx(M534a, "M534f.xlsx")
+
+## Se filtra la tabla - país x año y dpto y se graba
+
+M534a %>% filter( ubidpto=="19" & año=="2022")-> M534f1922
+
+write.xlsx(M534f1922, "M534f1922.xlsx")
+
+## Se elimina datos que no sirven
+
+rm(M534,M534a)
+
+b) ## Tabla de datos filtrada y limpia
+
+b.1) url <- "https://github.com/Joaprincs/Datos/raw/main/M534f1922%20-%200.csv"
+
+temp_file <- tempfile(fileext = ".csv")
+
+download.file(url, temp_file, mode = "wb")
+
+M534f1922 <-read.csv(temp_file)
+
+b.2)
+
+```{r echo=FALSE}
+head(M534f1922)
+```
+
+c) ## Análisis exploratorio de datos ##
+
+# Se carga la tabla filtrada y limpia
+
+M534f1922 <-read.csv(temp_file)
+View(M534f1922)
+library(gtsummary)
+
+tabla1<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, sexo) %>%
+  tbl_summary(by = sexo)
+tabla1
+
+tabla2<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, zona) %>%
+  tbl_summary(by = zona)
+tabla2
+
+tabla3<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, estrsocial) %>%
+  tbl_summary(by = estrsocial)
+tabla3
+
+tabla4<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, pobreza) %>%
+  tbl_summary(by = pobreza)
+tabla4
+
+tabla5<-M534f1922 %>%
+  select(hocios, salsem, inghogpcs, dominio) %>%
+  tbl_summary(by = dominio)
+tabla5
+
+gra1<-ggplot(M534f1922, aes(hocios, ln_salsem)) + geom_point()+
+  stat_smooth(method=lm, color="red")
+gra1
+
+gra2<-ggplot(M534f1922, aes(x = hocios, y = ln_salsem, color = factor(sexo))) +
+  geom_point()+stat_smooth(method=lm,color="red")
+gra2
+
+
+gra3<-ggplot(M534f1922, aes(x = hocios, y = ln_salsem, color = zona)) +
+  geom_point()+stat_smooth(method=lm, color="yellow")
+gra3
+
+gra4<-ggplot(M534f1922, aes(x = hocios, y = ln_salsem, color = factor(pobreza))) +
+  geom_point()+stat_smooth(method=lm, color="#556B2F")
+gra4
+
+gra5<-ggplot(M534f1922, aes(hocios, ln_inghogpcs)) + geom_point(color="orange")+
+  stat_smooth(method=lm, color="royalblue")
+gra5
+
+gra6<-ggplot(M534f1922, aes(hocios, ln_gashogpcs)) + geom_point(color="coral")+
+  stat_smooth(method=lm, color="#66CD00")
+gra6
+
+gra7<-ggplot(M534f1922, aes(x=hocios, y=ln_salsem,color=factor(dominio))) + geom_point()+
+  stat_smooth(method=lm, color="red")
+gra7
+
+gra8<-ggplot(M534f1922, aes(x=hocios, y=ln_salsem,color=factor(estciv))) + 
+  geom_point()+ stat_smooth(method=lm, color="#00868B")
+gra8
+
+ggplot(M534f1922, aes(x = hocios, y = ln_salsem, fill = factor(dominio))) +
+  geom_boxplot() +
+  labs( x = "hocios", y = "ln_salsem") +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98"))
+
+ggplot(M534f1922, aes(x = hocios, y = ln_salsem, fill = factor(sexo))) +
+  geom_boxplot() +
+  labs( x = "hocios", y = "ln_salsem") +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98"))
+
+ggplot(M534f1922, aes(x = hocios, y = ln_salsem, fill = factor(pobreza))) +
+  geom_boxplot() +
+  labs( x = "hocios", y = "ln_salsem") +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98","#9ACD32")) 
+
+ggplot(M534f1922, aes(x = hocios, y = ln_gashogpcs, fill = factor(zona))) +
+  geom_boxplot() +
+  scale_fill_manual(values = c("#87CEEB", "#98FB98")) 
+
+# Calculo de intervalos de confianza
+
+
+# Con los datos del trabajo
+
+library(BSDA)
+
+zsum.test(mean.x=mean(M534f1922$hocios),sigma.x=sd(M534f1922$hocios), n.x=1308,
+    conf.level=0.95)
+
+zsum.test(mean.x=mean(M534f1922$ln_salsem ),sigma.x=sd(M534f1922$ln_salsem ), n.x=1308,
+          conf.level=0.95)
+
+zsum.test(mean.x=mean(M534f1922$edad ),sigma.x=sd(M534f1922$edad), n.x=1308,
+          conf.level=0.95)
+
+zsum.test(mean.x=mean(M534f1922$ln_gashogpcs),sigma.x=sd(M534f1922$ln_gashogpcs), n.x=1308,
+          conf.level=0.95)
+
+
+
+# media
+tapply(X = M534f1922$hocios, INDEX  = M534f1922$sexo, 
+       FUN = mean, na.rm= T)
+#varianza
+tapply(X = M534f1922$hocios, INDEX  = M534f1922$sexo, 
+       FUN = sd, na.rm= T)
+zsum.test(mean.x=120.0689,sigma.x=20.71677,n.x=740,
+          mean.y=127.1338,sigma.y=23.11225,n.y=568, 
+          conf.level=0.95)
+
+
+## Pruebas de hipotesis ##
+
+
+# Prueba para la media
+
+t.test(M534f1922$hocios, alternative='two.sided', 
+       conf.level=0.95, mu=123.1369)
+
+t.test(M534f1922$ln_salsem, alternative='two.sided', 
+       conf.level=0.95, mu=5.039476)
+
+t.test(M534f1922$ln_gashogpcs , alternative='two.sided', 
+       conf.level=0.95, mu=4.327796)
+
+
+
+## estimación MCO
+
+modelo1<-lm(hocios~ln_salsem, M534f1922)
+summary(modelo1)
+
+modelo2<-lm(hocios~ln_inghogpcs, M534f1922)
+summary(modelo2)
+
+modelo3<-lm(hocios~edad+I(edad^2), M534f1922)
+summary(modelo3)
+
+
+d) Script R markdown link de acceso: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
